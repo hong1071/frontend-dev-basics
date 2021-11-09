@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+	<style>
+	
+	input{
+		background-color: #fff;
+		padding: 5px;
+		border: 2px solid #03cf5d;
+		outline:none;
+	}
+	
+	input.focused{
+		background-color: red;
+	}
+	
+	</style>
+	
+	<script>
+		
+		function changeClassName(el, name){
+			el.className = name;
+		}
+	
+	</script>
+
+</head>
+<body>
+	<form action="">
+		<input onfocus='changeClassName(this, "focused")' onblur='changeClassName(this, "")' type="text" name="userId" id="user-id" placeholder="아이디" />
+		
+		<br/><br/>
+		
+		<input onfocus='changeClassName(this, "focused")' onblur='changeClassName(this, "")' type="password" name="password" id="user-password" placeholder="비밀번호" />
+	</form>
+</body>
+</html>
