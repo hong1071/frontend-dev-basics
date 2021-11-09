@@ -8,6 +8,8 @@
 	
 	window.addEventListener("load", function(){
 		var imgElement = document.createElement("img");
+		
+		// element에 property 부여(attribute와 다름!)
 		imgElement.src = "https://ac2-p.namu.la/20210411/deb29a063b6205be7f0944acb350bf43e88174df76fd6f76ed8a7e35bdadc826.jpg?type=orig";
 		imgElement.style.width = "200px";
 		imgElement.alt = "따봉도치";
@@ -15,7 +17,7 @@
 		imgElement['data-no'] = 10;			// 비표준 속성, property X 
 		
 		setTimeout(function(){
-			document.body.appendChild(imgElement);
+			document.body.appendChild(imgElement);		// body에 element append 
 			
 		}, 2000);
 	});

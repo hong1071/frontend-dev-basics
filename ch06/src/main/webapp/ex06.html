@@ -7,13 +7,13 @@
 	<script>
 	
 	window.addEventListener("load", function(){
-		var h3Element = document.createElement("h3");
-		var textNode = document.createTextNode("Hello DOM");
+		var h3Element = document.createElement("h3");			// element 생성
+		var textNode = document.createTextNode("Hello DOM");	// textNode 생성
 		
-		h3Element.append(textNode);
+		h3Element.append(textNode);								// element에 textNode 더하기
 		
 		setTimeout(function(){
-			document.body.appendChild(h3Element);
+			document.body.appendChild(h3Element);				// body에 element append
 		}, 2000);
 	});
 	

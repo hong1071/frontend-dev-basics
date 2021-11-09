@@ -9,16 +9,16 @@
 	var registerEventHandler = function(element, eventName, eventHandler){
 		element &&						// element가 null이 아니면
 		element.attachEvent &&			// <= ie8
-		element.atachEvent('on' + reventName, eventHandler);
+		element.attachEvent('on' + eventName, eventHandler);
 		
 		element &&							// element가 null이 아니면
-		element.attachListener &&			// 표준 ㅂ ㅡ라우저
-		element.atachEventListener(reventName, eventHandler);
+		element.addEventListener &&			// 표준 브라우저
+		element.addEventListener(eventName, eventHandler);
 	}
 	
 	window.addEventListener("load", function(){
 		
-		var el = document.getElementById("header")
+		var el = document.getElementById("header");
 		
 		var clickEventHandler1 = function(){
 			console.log("click1");

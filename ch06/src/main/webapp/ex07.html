@@ -7,10 +7,10 @@
 	<script>
 	
 	window.addEventListener("load", function(){
-		var html = "<h3>Hello DOM</h3>"
+		var html = "<h3>Hello DOM</h3>"				// another way, 허나 권장하지 않음
 		
 		setTimeout(function(){
-			document.body.innerHTML += html;
+			document.body.innerHTML += html;		// += 로 해야 기존의 element에 새로운 element가 더해짐
 		}, 2000);
 	});
 	

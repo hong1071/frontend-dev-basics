@@ -9,13 +9,14 @@
 	/*
 		기본 이벤트 핸들러 동작 막기
 		// form: validation 성공후 form.submit() 직접 실행
-		// acchor: 버튼이나 메뉴로 사용하는 경우 click event
+		// anchor: 버튼이나 메뉴로 사용하는 경우 click event
 	*/
 	
 	window.addEventListener("load", function(){
 		
 		document.getElementById("btn-delete").addEventListener("click", function(event){
-			event.preventDefault();
+			
+			event.preventDefault();						// 기본 handler 동작 막기
 			console.log("비밀번호 입력 다이얼로그 띄우기");
 		});
 		

@@ -15,12 +15,12 @@
 		imgElement.setAttribute('alt', '따봉도치');
 		imgElement.setAttribute('title', '따봉도치야 고마워!');
 		imgElement['data-no'] = 20;						 // property
-		imgElement.setAttribute('data-no', 10);			 // 비표준 속성, property X 
+		imgElement.setAttribute('data-no', 10);			 // attribute, 비표준 속성
 		
 		setTimeout(function(){
 			document.body.appendChild(imgElement);
-			console.log(imgElement['data-no']);
-			console.log(imgElement.getAttribute('data-no'));
+			console.log(imgElement['data-no']);					// 비표준 속성: property에 대한 표현식
+			console.log(imgElement.getAttribute('data-no'));	// 비표준 속성: attribute에 대한 표현식
 		}, 2000);
 	});
 	
