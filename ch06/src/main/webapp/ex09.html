@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<script>
+	
+	window.addEventListener("load", function(){
+		var imgElement = document.createElement("img");
+		
+		// (표준 + 비표준(property로 접근x)) 속성을 읽기/쓰기 위해서 setAttribute/getAttribute를 사용한다.
+		imgElement.setAttribute('src', 'https://ac2-p.namu.la/20210411/deb29a063b6205be7f0944acb350bf43e88174df76fd6f76ed8a7e35bdadc826.jpg?type=orig');
+		imgElement.setAttribute('style', 'width:200px');
+		imgElement.setAttribute('alt', '따봉도치');
+		imgElement.setAttribute('title', '따봉도치야 고마워!');
+		imgElement['data-no'] = 20;						 // property
+		imgElement.setAttribute('data-no', 10);			 // 비표준 속성, property X 
+		
+		setTimeout(function(){
+			document.body.appendChild(imgElement);
+			console.log(imgElement['data-no']);
+			console.log(imgElement.getAttribute('data-no'));
+		}, 2000);
+	});
+	
+	</script>
+	
+</head>
+<body>
+	<h1>DOM(Document Object Model)</h1>
+	<h2>3. HTML Element 속성 조작2</h2>
+	
+</body>
+</html>
