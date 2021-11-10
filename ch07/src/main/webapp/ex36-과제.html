@@ -25,8 +25,35 @@
 				// 랜덤 변수 
 				var result = Math.floor( Math.random() * (images.length-1)  ) + 1;
 				
-				console.log(result);
+				var randomImage = images[result];
+				var randomImageURI = randomImage.split(":")[1];
+				
+				$(".image-viewer div img").attr("src", "images/" + randomImageURI);
+				
 			});
+			
+			var controlNum = 0
+			
+			$("#btn-slideShow").click(function(){
+				
+				controlNum++;
+				console.log(controlNum);
+				$("#btn-slideShow").text("슬라이드 쇼 멈춤");
+				var slideShow = setInterval(function(){
+					var result = Math.floor( Math.random() * (images.length-1)  ) + 1;
+					
+					var randomImage = images[result];
+					var randomImageURI = randomImage.split(":")[1];
+					
+					$(".image-viewer div img").attr("src", "images/" + randomImageURI);
+				}, 1500);
+				
+				if(controlNum % 2 == 0){
+					$("#btn-slideShow").text("슬라이드 쇼 시작");
+					clearInterval(slideShow);
+				}
+			})
+			
 			
 		});
 		
