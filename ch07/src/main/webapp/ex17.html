@@ -1,25 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
- Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta http-equiv="Content-Script-Type" content="text/javascript" />
-		<title>sample23</title>
-		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
-		<script type="text/javascript">
-		$(function(){
-			$("li:first").css("color","red");
-		});
-		</script>
-	</head>
-	<body>
-		<ul>
-			<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-			<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-			<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-			<li> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<title>Insert title here</title>
 
-		</ul>
-	</body>
+	<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+	<script>
+	
+		$(function() {
+			setTimeout(function() {
+				$("li:contains('샘플')").css("color", "red");		// 문자열을 가지고 있는 element를 찾는다
+				$("li:has('strong')").css("color", "blue");		// 태그를 가지고 있는 element를 찾는다
+			}, 1000);
+		});
+		
+	</script>
+</head>
+<body>
+	<h1>선택자 - jQuery Filter(contains, has)</h1>
+	<ul>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 <strong>텍스트</strong> 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>샘플1 샘플2 샘플3 샘플4 샘플5</li>
+	</ul>
+</body>
 </html>
