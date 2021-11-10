@@ -2,23 +2,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+
+	<!-- 개별 소스 버전(서비스 서버 호스팅) -->
+	<!-- <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>  -->
+	
+	<!-- 개별 압축 버전(서비스 서버 호스팅) -->
+	<!-- <script type="text/javascript" src="./jquery/jquery-3.6.0.min.js"></script>  -->
+	
+	<!-- 개별 압축 버전(CDN) - 범세계적 중앙 서버 -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
 	<script>
 	
-		$( document ).ready( function() {
+		var $obj1 = jQuery();
+		console.log(typeof(jQuery), typeof($obj1), $obj1.jquery);
 		
-			//alert( "Hello jQuery" );
-			var $p = $("p");
-			alert( $p.length );
-		});
+		var $obj2 = $();
+		console.log(typeof($), typeof($obj2), $obj2.jquery);
 		
 	</script>
 </head>
 <body>
-<p>
-    이 문장이 보이고 Hello World가 뜨면, 자바스크립트에서 HTML 엘리멘트에 접근할 수
-    있는 것입니다. 	
-</p>
+	<h1>jQuery Loading</h1>
 </body>
 </html>
  
